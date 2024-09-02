@@ -117,7 +117,7 @@
 }
 
 
-.table {
+.table1 {
   width: 400px; 
   border-collapse: separate;  
   text-align: center;
@@ -144,3 +144,37 @@ th i, td i {
   left: 5%;
   font-weight: 600;
 }
+
+.todayReport{
+  display: flex;
+  height: 60vh;  
+  width: 60vh;
+  padding-top: 15vh;
+  align-items: flex-start;
+  justify-content: center; 
+  background-color:rgba(255,255,255,0.5);
+  margin-top: 20vh;
+  flex-wrap: wrap;
+  border-radius: 7vh;
+}
+
+#todayTitle{
+  position: relative;
+  top: -11vh;
+  font-size: 20px;
+  font-weight: 500;
+  
+}
+.responsive-line {
+  position: relative;
+  border-top: 1px solid #000; /* Line thickness and color */
+  width: 80%; /* Full width of the container */
+  max-width: 600px; /* Maximum width of the line */
+  margin: 4px auto; /* Center the line and add space above and below */
+  top: -17vh;
+}
+
+#tblTodayReport {
+  
+}
+
