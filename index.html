@@ -6,11 +6,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+
 
     <title>Weather Forcast</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body >
+<body class="body">
     
 <div class="container p-5">
 
@@ -31,8 +34,25 @@
           <h1 class="text-center" id="countryTemp">28 C</h1>
         </div>
     </div>
-      
-        
+
+    <div class="row">
+        <div id="countryWeather">
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <td>Wind<i class="fa-solid fa-wind fa-sm" style="color: #ffffff;"></i></td>
+                        <td>Humidity<i class="bi bi-moisture"></i></td>
+                    </tr>
+                  <tr>
+                    <td>10 km/h</td>
+                    <td>86 %</td>
+                  </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="label">
     <div class="row">   
         <div class="txtOne">
             <h4>WEATHER</h4>
@@ -42,19 +62,27 @@
             <h4>FORECAST</h4>
         </div>
     </div> 
-
+    </div>
+    
     <div class="search-container">
         <div class="input-group mb-3">
           <input type="text" class="form-control input-text" placeholder="Search a City" aria-label="Search a City" aria-describedby="button-addon" id="txt">
           <div class="input-group-append">
             <button class="btn btn-outline-warning btn-lg" type="button" id="button-addon" style="display: flex; align-items: center; justify-content: center;">
                 <i class="fa fa-search" style="margin: 0;"></i>
-              </button>
+            </button>
           </div>
         </div>
     </div>
-      
-    
+
+    <!-- ========================================Second page===============================================   -->
+    <div class="row">
+        <div class="col-sm-4">
+                    
+            <h4 class="text-left" id="secondPageLocation">Sri Lanka</h4>
+        </div>
+    </div>
+
 </div>
 
   
