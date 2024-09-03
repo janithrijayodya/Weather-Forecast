@@ -124,7 +124,7 @@
   
 }
 
-th, td {
+.table1 th, td {
   padding: 5px;  
   vertical-align: middle;  
   color: white; 
@@ -147,13 +147,14 @@ th i, td i {
 
 .todayReport{
   display: flex;
-  height: 60vh;  
-  width: 60vh;
+  height: 50vh;  
+  width: 50vh;
   padding-top: 15vh;
   align-items: flex-start;
   justify-content: center; 
-  background-color:rgba(255,255,255,0.5);
+  background-color:rgba(255, 255, 255, 0.5);
   margin-top: 20vh;
+  margin-left: -12vh;
   flex-wrap: wrap;
   border-radius: 7vh;
 }
@@ -171,10 +172,52 @@ th i, td i {
   width: 80%; /* Full width of the container */
   max-width: 600px; /* Maximum width of the line */
   margin: 4px auto; /* Center the line and add space above and below */
-  top: -17vh;
+  top: -14vh;
 }
 
-#tblTodayReport {
+#tblTodayReport td {
+  position: relative;
+  top: -10vh;
+  color: #000;
+  /* padding-left: 25px; */
+}
+
+.weekReport{
+  display: flex;
+  height: 45vh;  
+  width: 120vh;
+  padding-top: 10vh;
+  align-items: flex-start;
+  justify-content: center; 
+  background-color:rgba(255, 255, 255, 0.5);
+  margin-top: 7vh;
+  flex-wrap: wrap;
+  border-radius: 4vh;
+  background: linear-gradient(to top,#6EC3D9,#9CD1DF,#D9D9D9); /* Gradient from dark to light */
+
+}
+
+#weekTitle{
+  position: relative;
+  top: -9vh;
+  left: 5vh;
+  font-size: 20px;
+  font-weight: 600;
+  color: #023e7d;
   
+}
+
+#tblWeekReport{
+  position: relative;
+  top: -5vh;
+  width: 80%;
+
+}
+#tblWeekReport td{
+  color: #000;
+}
+
+#week1 , #week2, #week3 , #week4, #week5 ,#week6, #week7{
+  font-weight: 600;
 }
 
