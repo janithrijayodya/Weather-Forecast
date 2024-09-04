@@ -145,6 +145,8 @@ th i, td i {
   font-weight: 600;
 }
 
+
+
 .todayReport{
   display: flex;
   height: 50vh;  
@@ -221,3 +223,43 @@ th i, td i {
   font-weight: 600;
 }
 
+
+.hourReport{
+  display: flex;
+  height: 30vh;
+  width: 120vh;
+  /* background-color: #f3f4f5; */
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
+  padding-top: 10vh;
+  margin-top: 7vh;
+  flex-wrap: wrap;
+}
+
+#hourTitle{
+  position: relative;
+  left: 3vh;
+  top: -8vh;
+  font-weight: 400;
+  color: #023e7d;
+}
+
+#hourLine{
+  position: relative;
+  top: -9vh;
+  left: -8vh;
+  background-color: #023e7d;
+}
+
+#tblHourReport{
+  /* position: relative;
+  justify-content: center;
+  align-items: center; */
+  position: relative;
+  top: -8vh;
+}
+
+#tblHourReport td{
+  color: #000;
+}
