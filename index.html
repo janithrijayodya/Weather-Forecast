@@ -68,7 +68,7 @@
         <div class="input-group mb-3">
           <input type="text" class="form-control input-text" placeholder="Search a City" aria-label="Search a City" aria-describedby="button-addon" id="txt">
           <div class="input-group-append">
-            <button class="btn btn-outline-warning btn-lg" type="button" id="button-addon" style="display: flex; align-items: center; justify-content: center;">
+            <button class="btn btn-outline-warning btn-lg" type="button" id="button-addon" style="display: flex; align-items: center; justify-content: center;" onclick="btnCity()">
                 <i class="fa fa-search" style="margin: 0;"></i>
             </button>
           </div>
@@ -79,7 +79,7 @@
     <div class="row">
         <div class="col-md-6 col-sm-4 col-12">
            <div class="town">
-              <h4 class="text-left" id="secondPageLocation">Matara</h4>
+              <h4 class="text-left" id="secondPageLocation"><img src="" alt="" id="image">Matara</h4>
            </div>         
         </div>
     </div>
@@ -101,25 +101,25 @@
                         <td>Temperature</td>
                         <td>-------</td>
                         <td><i class="bi bi-thermometer-sun"></i></td>
-                        <td>28 C</td>
+                        <td id="todayTemp">28 C</td>
                       </tr>
                       <tr>
                         <td>Wind Speed</td>
                         <td>-------</td>
                         <td><i class="bi bi-cloud-fog2"></i></i></td>
-                        <td>10 km/h</td>
+                        <td id="todayWind">10 km/h</td>
                       </tr>
                       <tr>
                         <td>Humidity</td>
                         <td>-------</td>
                         <td><i class="bi bi-moisture"></td> 
-                        <td>86 %</td>                     
+                        <td id="todayHum">86 %</td>                     
                       </tr>
                       <tr>
                         <td>Description</td>
                         <td>-------</td>
                         <td><i class="bi bi-file-earmark-break-fill"></i></td> 
-                        <td colspan="2"></td>                      
+                        <td colspan="2" id="todayDesc"></td>                      
                       </tr>
 
                     </tbody>
@@ -358,6 +358,36 @@
 </div>
 
 
+ <!-- ===========================fifth page============================================ -->
+
+<div class="row">
+  <div class="fifthPage">
+
+    <div class="col-sm-4" id="findUs">
+      <p class="topicFind">FIND US</p>
+      <p class="address">Sri Lanka
+        4140 Parker Rd, Matara.</p>
+      <p class="icns"><img width="34" height="34" src="https://img.icons8.com/nolan/64/youtube-play.png" alt="youtube-play"/>
+        <img width="34" height="34" src="https://img.icons8.com/nolan/64/instagram-new.png" alt="instagram-new"/>
+        <img width="34" height="34" src="https://img.icons8.com/nolan/64/facebook-new.png" alt="facebook-new"/>
+        <img width="34" height="34" src="https://img.icons8.com/nolan/64/twitter.png" alt="twitter"/>
+      </p>
+    </div>
+
+
+    <div class="col-sm-4" id="contact">
+      <p class="con">CONTACT US</p>
+
+      <p id="phone">General: <br><br>
+      +(94) 71 8593648 <br>
+      nejfheyhiun@gmail.com  <br><br>
+      Business: <br><br>
+      +(94) 41 1536846 <br>
+      nsakfbyehhb@gmail.com</p>
+    </div>
+
+  </div>
+</div>
 
   
    <script src="app.js"></script>

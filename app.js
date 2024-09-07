@@ -1,27 +1,49 @@
-//===============config==============
+const apiKey = '7ac0e3b4ae48403b80c133716240709';
+let city = document.getElementById("txt");
+let btn = document.getElementById("button-addon");
 
-const myChart = {
-  type: 'line',
-  data: data,
-};
+function btnCity(){
+  let cityName = city.value.trim();
+  // console.log(cityName);
+  city.value = "";
+
+  let URL= `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityName}`;
+
+  fetch(URL).then(res => res.json())
+  .then(data =>{
+    // console.log(data);
+    // let {name,country,state} = data[0];
+    getWeatherDetails(data);
+
+  }).catch(()=>{
+    alert(`Faild to fetch coordinates of ${cityName}`)
+  });
+}
 
 
-//=================set up=====================
 
-// Generate an array of dates for the last 7 days
-const labels = Array.from({ length: 7 }, (_, i) => {
-  const date = new Date();
-  date.setDate(date.getDate() - (6 - i)); // Adjust for last 7 days
-  return date.toISOString().split('T')[0]; // Format as YYYY-MM-DD
-});
+function getWeatherDetails(data){
+    const location = data.location;
 
-const data = {
-  labels: labels,
-  datasets: [{
-    label: 'My First Dataset',
-    data: [28, 30, 29, 31, 32, 27, 28],
-    fill: false,
-    borderColor: 'rgb(75, 192, 192)',
-    tension: 0.1
-  }]
-};
+    document.getElementById("secondPageLocation").innerText = location.name;
+
+    const current = data.current;
+
+    document.getElementById("todayTemp").innerText = `${current.temp_c}°C`;
+    document.getElementById("todayWind").innerText = `${current.wind_kph}km/h`;
+    document.getElementById("todayHum").innerText = `${current.humidity}%`;
+    document.getElementById("todayDesc").innerText = `${current.condition.text}`;
+    document.getElementById("image").src = `${current.condition.icon}`;
+
+
+    let tblHourly = document.getElementById("tblHourReport");
+
+    data.forecast.forecastday[0].hour.forEach( hour =>{
+      tblHourly +=`<td>
+                      <img class="" width="64" height="64" src="${hour.condition.icon}" alt="bright-moon"/>
+                      <h6 class="text-center">${hour.time}</h6>
+                      <p class="text-center" id="00Time">${hour.temp_c}°C</p>
+                  </td>`
+      
+    })
+}

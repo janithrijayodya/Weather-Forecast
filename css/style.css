@@ -2,16 +2,17 @@
 
     .body{
       background-color: #adc6e1;
-      height: 5000px;
+      height: 2900px;
       overflow-x: hidden;
       
+      
     }
-    .constraint{
+    /* .container{
       position: relative;
-      width: 100%;
-      height: 100vh; /* Full viewport height */
+      width: 100vw;
+      height: 100vh; 
       overflow: hidden
-    }
+    } */
 
    #bgVideo {
     position: absolute;
@@ -29,7 +30,7 @@
     justify-content: flex-start;  /* Align items at the start vertically */
     align-items: center;          /* Center horizontally */
     height: 20vh;                 /* Full viewport height */
-    padding-top: 18vh;            /* Adjust padding to place content 40% from the top */
+    padding-top: 30vh;            /* Adjust padding to place content 40% from the top */
     color: white;                 /* Text color */
     box-sizing: border-box;       /* Include padding in the element's width and height */
   }
@@ -49,7 +50,8 @@
   .txtTwo {
     position: absolute; 
     left: 7%;           
-    top: 12%;           
+    top: 14%; 
+    /* padding-top: 20vh;           */
     color: white;       
     text-align: left;   
   }
@@ -111,7 +113,7 @@
   justify-content: center;      /* Center horizontally */
   align-items: flex-start;      /* Align items at the start vertically */
   height: 80vh;                /* Full viewport height */
-  padding-top: 20vh;            /* 40% from the top */
+  padding-top: 30vh;            /* 40% from the top */
   color: white;                 /* Text color */
   box-sizing: border-box;       /* Include padding in the element's width and height */
 }
@@ -569,6 +571,7 @@ th i, td i {
   width: 100vw;
   margin-top: 110vh;
   margin-left: 0;
+  /* background-color: #000; */
 }
 
 .card {
@@ -631,7 +634,7 @@ th i, td i {
 }
 
 .card p:last-child {
-  color: #e81cff;
+  color: #5e60ce;
   font-weight: 600;
 }
 
@@ -727,4 +730,157 @@ th i, td i {
     top: 180vh;
     left: -6vh;
   }
+}
+
+
+/* ==================================fifth page================================ */
+
+.fifthPage{
+  display: flex;
+  width: 100vw;
+  height: 50vh;
+  background-color: #032952;
+}
+
+.topicFind{
+  position: absolute;
+  color: rgb(110, 109, 109);
+  padding-left: 130vh;
+  padding-top: 10vh;
+}
+
+.address{
+  color: white;
+  position: absolute;
+  padding-left: 130vh;
+  padding-top: 16vh;
+}
+
+.icns{
+  position: absolute;
+  padding-left: 130vh;
+  padding-top: 22vh;
+}
+
+.con{
+  position: absolute;
+  color: rgb(110, 109, 109);
+  padding-top: 10vh;
+  padding-left:100vh ;
+}
+
+#phone{
+  position: absolute;
+  color: white;
+  padding-top: 16vh;
+  padding-left: 100vh;
+}
+
+@media (max-width: 1200px) {
+  .fifthPage{
+    position: absolute;
+    flex-direction: column;
+    height: 55vh;
+    /* font-size: 5vh; */
+  }
+  .topicFind, .con {
+    font-size: 1rem; /* Slightly smaller for large tablets */
+  }
+  .address, #phone {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .fifthPage{
+    position: absolute;
+    top: 420vh;
+    /* justify-content: center;
+    align-items: center;
+    text-align: center; */
+  }
+  .topicFind {
+    font-size: 1rem; /* Adjust font size for medium screens */
+    left: -85vh;
+  }
+  .con{
+    font-size: 1rem; 
+    left: -12vh;
+  }
+  .address {
+    font-size: 1rem;
+    left: -85vh;
+  }
+  #phone{
+    font-size: 1rem;
+    left: -12vh;
+  }
+  .icns{
+    left: -85vh;
+    top: 5vh;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .fifthPage{
+    position: absolute;
+    top: 480vh;
+  }
+
+  .topicFind{
+    font-size: 1rem; 
+    left: -50vh;
+  }
+
+  .con{
+    left: -50vh;
+  }
+  .address, #phone {
+    font-size: 0.9rem;
+    left: -50vh;
+  }
+  .icns{
+    left: -50vh;
+    width: 24px;
+    height: 24px;
+  }
+
+}
+@media (max-width: 576px) {
+  .fifthPage{
+    top: 540vh;
+    /* justify-content: center;
+    align-items: center;
+    text-align: center; */
+  }
+  .topicFind, .con {
+    font-size: 1rem; /* Even smaller fonts for small mobile devices */
+    left: -85vh;
+    top: 3vh;
+  }
+  .address, #phone {
+    font-size: 0.8rem;
+    left: -85vh;
+    top: 5vh;
+  }
+  .icns{
+    position: absolute;
+    left: vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .fifthPage{
+    top: 610vh;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+  }
+  /* .icns{
+    position: relative;
+    left: -7vh;
+    top: 5vh;
+  } */
 }
