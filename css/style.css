@@ -227,7 +227,7 @@ th i, td i {
 
 
 .hourReport{
-  display: flex;
+  /* display: flex; */
   height: 30vh;
   width: 120vh;
   /* background-color: #f3f4f5; */
@@ -243,27 +243,38 @@ th i, td i {
   position: relative;
   left: 3vh;
   top: -8vh;
-  font-weight: 400;
+  font-weight: 500;
   color: #023e7d;
 }
 
 #hourLine{
   position: relative;
-  top: -9vh;
-  left: -8vh;
+  top: -5vh;
+  left: vh;
+  width: 120vh;
   background-color: #023e7d;
 }
 
 #tblHourReport{
-  /* position: relative;
-  justify-content: center;
-  align-items: center; */
   position: relative;
-  top: -8vh;
+  top: -1vh;
+  /* height: 20px; */
 }
 
-#tblHourReport td{
+#tblHourReport td {
   color: #000;
+  text-align: center; /* Center-align the text */
+  vertical-align: middle;
+}
+
+.weather-cards-hour{
+  display: flex;
+  gap: 20px;
+}
+.table-responsive {
+  max-width: 100%;
+  overflow-x: auto;  /* Enables horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on touch devices */
 }
 
 
