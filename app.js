@@ -54,6 +54,9 @@ function btnCity() {
   console.log(cityName);
   city.value = "";
 
+  const section = document.getElementById("second");
+  section.scrollIntoView({ behavior: 'smooth' });
+
   let URL = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityName}&days=7`;
 
   fetch(URL)
@@ -134,4 +137,17 @@ function updateCurrentWeather(data) {
   document.getElementById("todayHum").innerText = `${current.humidity}%`;
   document.getElementById("todayDesc").innerText = `${current.condition.text}`;
   document.getElementById("image").src = `${current.condition.icon}`;
+}
+
+
+
+
+
+function subscribe(){
+  
+  let city = document.getElementById("city");
+  let email =  document.getElementById("email");
+    
+  city.value = "";
+  email.value = "";
 }
